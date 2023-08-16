@@ -34,14 +34,17 @@ export default {
             {
                 text: 'Review',
                 link: '/review/',
+                collapsible: true,
                 children: [
                     {
                         text: 'Meizu 20 Review',
                         link: '/review/Meizu 20 Review.md',
+                        collapsible: true,
                     },
                     {
                         text: 'iOS 17 & SF Symbols 5 Review',
                         link: '/review/iOS 17 & SF Symbols 5 Review.md',
+                        collapsible: true,
                     }
                 ],
             },
@@ -50,16 +53,19 @@ export default {
             {
                 text: 'Thoughts',
                 link: '/thoughts/',
+                collapsible: true,
             },
             
             // Test
             {
                 text: 'Test',
                 link: '/test/',
+                collapsible: true,
                 children: [
                     {
                         text: 'Test Markdown File',
                         link: '/Test/test.md',
+                        collapsible: true,
                     },
                 ],
             },
