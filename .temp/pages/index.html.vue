@@ -3,6 +3,9 @@
 <p>Check out my works at... <a href="https://github.com/asir2004" target="_blank" rel="noopener noreferrer">GitHub<ExternalLinkIcon/></a> or <a href="https://youtube.com/@MarkView64" target="_blank" rel="noopener noreferrer">YouTube<ExternalLinkIcon/></a></p>
 <h2 id="self-introduction" tabindex="-1"><a class="header-anchor" href="#self-introduction" aria-hidden="true">#</a> Self Introduction</h2>
 <p>Hi, I'm Mark. I haven't thought about my self-given last name yet, so 'View' became my temporary last name on the Internet. I love motion design, and exploring about technology. So you'll see some of tech products reviews of mine here.</p>
+<p>I really don't know why I used English in this page, even I set the HTML language label as Simplified-Chinese(China).</p>
+<h2 id="thanks-to" tabindex="-1"><a class="header-anchor" href="#thanks-to" aria-hidden="true">#</a> Thanks To...</h2>
+<p><a href="https://winhhh666.github.io" target="_blank" rel="noopener noreferrer"><em>@Winhhh666</em> helped me building this blog up<ExternalLinkIcon/></a></p>
 </div></template>
 
 
