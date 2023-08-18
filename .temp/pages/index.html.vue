@@ -5,7 +5,8 @@
 <p>Hi, I'm Mark. I haven't thought about my self-given last name yet, so 'View' became my temporary last name on the Internet. I love motion design, and exploring about technology. So you'll see some of tech products reviews of mine here.</p>
 <p>I really don't know why I used English in this page, even I set the HTML language label as Simplified-Chinese(China).</p>
 <h2 id="thanks-to" tabindex="-1"><a class="header-anchor" href="#thanks-to" aria-hidden="true">#</a> Thanks To...</h2>
-<p><a href="https://winhhh666.github.io" target="_blank" rel="noopener noreferrer"><em>@Winhhh666</em> helped me building this blog up<ExternalLinkIcon/></a></p>
+<p>All of you reading and subscribing.</p>
+<p><a href="https://winhhh666.github.io" target="_blank" rel="noopener noreferrer">@Winhhh666<ExternalLinkIcon/></a> helped me building this blog up</p>
 </div></template>
 
 
