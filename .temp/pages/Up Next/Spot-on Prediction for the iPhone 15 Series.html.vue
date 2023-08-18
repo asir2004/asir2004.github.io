@@ -1,4 +1,4 @@
-<template><div><h1 id="spot-on-prediction-for-the-iphone-15-series" tabindex="-1"><a class="header-anchor" href="#spot-on-prediction-for-the-iphone-15-series" aria-hidden="true">#</a> Spot-on Prediction for the iPhone 15 Series</h1>
+<template><div><h1 id="📱-spot-on-prediction-for-the-iphone-15-series" tabindex="-1"><a class="header-anchor" href="#📱-spot-on-prediction-for-the-iphone-15-series" aria-hidden="true">#</a> 📱 Spot-on Prediction for the iPhone 15 Series</h1>
 <p><em>Author: Mark View</em></p>
 <p><em>Date: 2023-08-05</em></p>
 <hr>

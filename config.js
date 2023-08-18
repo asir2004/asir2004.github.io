@@ -54,11 +54,11 @@ export default {
             {
                 text: 'Up Next',
                 link: '/up next/',
-                collapsible: true,
                 children: [
                     {
                         text: 'Spot-on Prediction for the iPhone 15 Series',
                         link: '/up next/Spot-on Prediction for the iPhone 15 Series.md',
+                        collapsible: true,
                     },
                 ],
             },
