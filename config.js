@@ -70,6 +70,19 @@ export default {
                 collapsible: true,
             },
             
+            // Thoughts
+            {
+                text: 'Experience',
+                link: '/experience/',
+                children: [
+                    {
+                        text: '用 VuePress 和 GitHub Pages 搭建个人博客实录',
+                        link: '/experience/用 VuePress 和 GitHub Pages 搭建个人博客实录.md',
+                        collapsible: true,
+                    },
+                ],
+            },
+            
             // Test
             {
                 text: 'Test',
