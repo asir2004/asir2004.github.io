@@ -6,5 +6,7 @@ export const pagesRoutes = [
   ["v-13925e64","/Test/",{"title":"README.md Here's a testing folder includes all .md files for testing."},["/Test/README.md"]],
   ["v-634ab983","/Test/Test.html",{"title":"Test.md (aka Test.html)"},[":md"]],
   ["v-d48baa08","/Thoughts/",{"title":"Thoughts, Full of Ideas."},["/Thoughts/README.md"]],
+  ["v-794fffad","/Up%20Next/",{"title":"Up Next"},["/Up Next/","/Up Next/README.md","/Up%20Next/README.md"]],
+  ["v-b4040772","/Up%20Next/Spot-on%20Prediction%20for%20the%20iPhone%2015%20Series.html",{"title":"Spot-on Prediction for the iPhone 15 Series"},["/Up Next/Spot-on Prediction for the iPhone 15 Series.html","/Up Next/Spot-on Prediction for the iPhone 15 Series.md",":md"]],
   ["v-3706649a","/404.html",{"title":""},[]],
 ]

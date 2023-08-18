@@ -1,5 +1,4 @@
 import { defaultTheme } from 'vuepress'
-import { gitPlugin } from '@vuepress/plugin-git'
 
 export default {
     title: 'Thoughts of Mark View',
@@ -7,12 +6,6 @@ export default {
     lang: 'zh-CN',
     head: [['link', { rel: 'icon', href: '/images/logo_256*256.png' }]],
     repo: 'https://github.com/asir2004/asir2004.github.io',
-    
-    plugins: [
-        gitPlugin({
-            // 配置项
-        }),
-    ],
     
     theme: defaultTheme({
         subSiderbar: 'auto',
@@ -54,6 +47,19 @@ export default {
                         text: 'iOS 17 & SF Symbols 5 Review',
                         link: '/review/iOS 17 & SF Symbols 5 Review.md',
                     }
+                ],
+            },
+            
+            // Up Next
+            {
+                text: 'Up Next',
+                link: '/up next/',
+                collapsible: true,
+                children: [
+                    {
+                        text: 'Spot-on Prediction for the iPhone 15 Series',
+                        link: '/up next/Spot-on Prediction for the iPhone 15 Series.md',
+                    },
                 ],
             },
             
