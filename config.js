@@ -70,7 +70,7 @@ export default {
                 collapsible: true,
             },
             
-            // Thoughts
+            // Experience
             {
                 text: 'Experience',
                 link: '/experience/',
@@ -82,6 +82,8 @@ export default {
                     },
                 ],
             },
+            
+            
             
             // Test
             {
