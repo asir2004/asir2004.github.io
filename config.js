@@ -83,18 +83,18 @@ export default {
                 ],
             },
             
-            // Playing With CSS
-            {
-                text: 'Playing With CSS',
-                link: '/playing with css',
-                children: [
-                    {
-                        text: 'Dynamic Blurred Color Background',
-                        link: '/Playing With CSS/DynamicBlurredColorBackground.html',
-                        collapsible: true,
-                    },
-                ],
-            },
+//          // Playing With CSS
+//          {
+//              text: 'Playing With CSS',
+//              link: '/Playing With CSS',
+//              children: [
+//                  {
+//                      text: 'Dynamic Blurred Color Background',
+//                      link: '/test/DynamicBlurredColorBackground.html',
+//                      collapsible: true,
+//                  },
+//              ],
+//          },
             
             // Test
             {

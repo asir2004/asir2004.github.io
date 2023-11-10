@@ -7,6 +7,8 @@ export const pagesComponents = {
   "v-0ffbb968": defineAsyncComponent(() => import(/* webpackChunkName: "v-0ffbb968" */"/Users/asir/vuepress-starter/docs/.vuepress/.temp/pages/Experience/index.html.vue")),
   // path: /Experience/%E7%94%A8%20VuePress%20%E5%92%8C%20GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E5%BD%95.html
   "v-0fe68655": defineAsyncComponent(() => import(/* webpackChunkName: "v-0fe68655" */"/Users/asir/vuepress-starter/docs/.vuepress/.temp/pages/Experience/用 VuePress 和 GitHub Pages 搭建个人博客实录.html.vue")),
+  // path: /Playing%20With%20CSS/
+  "v-47701fdb": defineAsyncComponent(() => import(/* webpackChunkName: "v-47701fdb" */"/Users/asir/vuepress-starter/docs/.vuepress/.temp/pages/Playing With CSS/index.html.vue")),
   // path: /Test/
   "v-13925e64": defineAsyncComponent(() => import(/* webpackChunkName: "v-13925e64" */"/Users/asir/vuepress-starter/docs/.vuepress/.temp/pages/Test/index.html.vue")),
   // path: /Test/Test.html
