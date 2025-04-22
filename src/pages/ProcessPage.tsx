@@ -19,7 +19,7 @@ export default function ProcessPage() {
                     <a href="mailto:markview.business@gmail.com" className="text-blue-500 hover:underline">Send an Email</a>
                 </div>
 
-                <BlueprintBorder color="blue-100"/>
+                <BlueprintBorder color="blue-100" expandInifinitely={true}/>
             </div>
         </div>
     )
