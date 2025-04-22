@@ -2,6 +2,6 @@ import WIPPage from "./WIPPage"
 
 export default function ProcessPage() {
     return (
-        <WIPPage />
+        <WIPPage lackedPageName="Process Page" />
     )
 }

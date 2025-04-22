@@ -5,7 +5,7 @@ type ContactCardProps = {
     className?: ClassNameValue;
 }
 
-export default function ContactCard({ className = "" }: ContactCardProps) {
+export default function ContactCard({ className }: ContactCardProps) {
     return (
         <div className={className as string}>
             <div className="bg-gray-100/50 p-2 min-w-xs max-w-xl rounded-4xl backdrop-blur-md shadow-xl/5">
