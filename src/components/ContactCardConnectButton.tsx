@@ -3,7 +3,7 @@ type ContactCardConnectButtonProps = {
     showTitle: ContactCardConnectButtonShowTitleStatus;
 }
 
-enum ContactCardConnectButtonShowTitleStatus {
+export enum ContactCardConnectButtonShowTitleStatus {
     SHOW = 'showTitle',
     HIDE = 'hideTitle'
 }
