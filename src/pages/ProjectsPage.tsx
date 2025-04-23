@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     const [expandedCard, setExpandedCard] = useState<{ year: number; index: number } | null>(null);
 
     return (
-        <div className="flex flex-col gap-8 max-w-5xl h-screen overflow-y-scroll pt-16">
+        <div className="flex flex-col gap-8 max-w-5xl pt-16">
             {groupedProjectsByYear.years.map((year) => (
                 <ProjectsPageSingleYearView
                     key={year}

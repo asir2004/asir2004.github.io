@@ -17,7 +17,7 @@ interface MarkdownFiles {
 }
 
 const markdownFiles = import.meta.glob("../../public/content/*.md", {
-    query: "?raw",
+    query: "?url&raw",
     import: "default",
     eager: true,
 }) as MarkdownFiles;

@@ -11,7 +11,7 @@ type NavBarLinkProps = {
 function NavBarLinkItem({ to, label, isActive }: NavBarLinkProps) {
   return (
     <li className="relative">
-      <Link to={to} className={`hover:text-gray-300 transition-colors duration-200 ${isActive ? 'text-black' : 'text-gray-500'}`}>
+      <Link to={to} className={`hover:text-gray-950 transition-colors duration-200 ${isActive ? 'text-gray-700' : 'text-gray-500'}`}>
         {label}
       </Link>
       {isActive && (
