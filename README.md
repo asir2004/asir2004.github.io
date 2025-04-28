@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# MarkViewPortfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+MarkViewPortfolio is a personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience. The site features a clean, responsive design with animated elements and organized project displays.
 
-Currently, two official plugins are available:
+## Technologies Used
+- React 19
+- TypeScript
+- Tailwind CSS
+- React Router DOM
+- Lottie for animations
+- Rive for interactive animations
+- Markdown rendering for content
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Project showcase organized by year
+- Interactive UI elements and animations
+- Responsive design for all devices
+- Markdown content support
+- Custom navigation with active state indicators
 
-## Expanding the ESLint configuration
+## Project Structure
+- `/src`: Source code
+  - `/components`: Reusable UI components
+  - `/pages`: Main page components
+  - `/data`: Project data and interfaces
+  - `/assets`: Static assets and animations
+  - `/lib`: Utility functions
+- `/public`: Static files and content
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Pages
+- Projects: Displays projects organized by year with expandable cards
+- Contact: Contact information
+- Process: Work process explanation (currently in development)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+- Node.js (latest LTS version recommended)
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd MarkViewPortfolio
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Development
+```bash
+# Start the development server
+npm run dev
 ```
+
+### Building for Production
+```bash
+# Build the project
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+## Project Configuration
+The project uses TypeScript with strict type checking and modern ES features. Configuration is split between:
+- `tsconfig.json`: Base TypeScript configuration
+- `tsconfig.app.json`: Application-specific TypeScript settings
+- `tsconfig.node.json`: Node-specific TypeScript settings
+- `vite.config.ts`: Vite bundler configuration
+
+## License
+[Add license information here]
+
+## Author
+- [Mark By](https://x.com/markbuildin)
