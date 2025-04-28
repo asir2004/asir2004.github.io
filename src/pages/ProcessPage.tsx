@@ -1,7 +1,11 @@
 import WIPPage from "./WIPPage"
+import LogoAnimated from "../components/LogoAnimated"
 
 export default function ProcessPage() {
     return (
-        <WIPPage lackedPageName="Process Page" />
+        <>
+            <LogoAnimated />
+            {/* <WIPPage lackedPageName="Process Page" /> */}
+        </>
     )
 }
