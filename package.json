@@ -17,6 +17,7 @@
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.487.0",
     "motion": "^12.6.3",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",

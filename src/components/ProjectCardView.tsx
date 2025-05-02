@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import CodeBlock from "./CodeBlock";
 
 interface ProjectCardViewProps {
     project: Project;
@@ -165,7 +166,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                 {isExpanded && (
                     <div className="flex flex-col w-full p-8">
                         {/*Content*/}
-                        <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                        <Markdown components={{ code: CodeBlock }} remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
                     </div>
                 )}
             </motion.div>
