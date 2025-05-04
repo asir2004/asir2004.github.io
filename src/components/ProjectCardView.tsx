@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import CodeBlock from "./CodeBlock";
+import { CodeBlock, InlineCode } from './markdown/index'
 
 interface ProjectCardViewProps {
     project: Project;
@@ -27,7 +27,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
     const cardStyles = {
         base: "flex flex-col items-start text-start bg-gray-100",
         closed: "max-w-xs h-64 rounded-xl overflow-clip",
-        expanded: "w-[calc(100%-2rem)] max-w-3xl max-h-[calc(100%-8rem)] overflow-scroll fixed top-1/2 left-1/2 -translate-x-1/2 shadow-lg rounded-3xl",
+        expanded: "w-[calc(100%-2rem)] max-w-2xl max-h-[calc(100%-8rem)] overflow-scroll fixed top-1/2 left-1/2 -translate-x-1/2 shadow-lg rounded-3xl",
     };
 
     const [zIndex, setZIndex] = useState(0);
@@ -35,18 +35,18 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
 
     useEffect(() => {
         if (isExpanded) {
-          const fileName = project.document;
-          const filePath = `../../public/content/${fileName}.md`;
-          const content = markdownFiles[filePath];
-          if (content) {
-            setMarkdownContent(content);
-          } else {
-            setMarkdownContent('# Not Found\n\nMarkdown file not found.');
-          }
+            const fileName = project.document;
+            const filePath = `../../public/content/${fileName}.md`;
+            const content = markdownFiles[filePath];
+            if (content) {
+                setMarkdownContent(content);
+            } else {
+                setMarkdownContent('# Not Found\n\nMarkdown file not found.');
+            }
         } else {
             setMarkdownContent("");
         }
-      }, [isExpanded, project.document]);
+    }, [isExpanded, project.document]);
 
     React.useEffect(() => {
         if (isExpanded) {
@@ -157,16 +157,24 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
 
                 <motion.img
                     layout
-                    transition={{ duration: 0.5, type: "spring"  }}
+                    transition={{ duration: 0.5, type: "spring" }}
                     src={"/src/resources/" + project.coverImage}
                     alt={project.title}
                     className="w-full object-cover"
                 />
-                
+
                 {isExpanded && (
-                    <div className="flex flex-col w-full p-8">
+                    <div className="flex flex-col w-full p-8 gap-2">
                         {/*Content*/}
-                        <Markdown components={{ code: CodeBlock }} remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                        <Markdown
+                            components={{
+                                code: InlineCode,
+                                pre: CodeBlock,
+                            }}
+                            remarkPlugins={[remarkGfm]}
+                        >
+                            {markdownContent}
+                        </Markdown>
                     </div>
                 )}
             </motion.div>
