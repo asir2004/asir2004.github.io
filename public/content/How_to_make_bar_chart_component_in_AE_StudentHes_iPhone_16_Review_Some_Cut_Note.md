@@ -17,7 +17,7 @@
 
 ## 如何通过表达式定义特定关键帧的数值？
 
-首先，我看到了 ```key().value``` 这种写法，尝试直接 ```key(2).value = score / scoreAtFullPosition * 100```，但失败了，它不单单给 key(2) 赋值，而是把整个属性永远变成了这个值。后来，我又看到更复杂的```linear(t, tMin, tMax, value1, value2)``` 写法，这是线性映射，根据 t 在 tMin 和 tMax 中的位置，决定输出 value1 至 value2 中对应的数值。它健壮一些的写法是这样的（如果你想沿用当前关键帧的时间）：
+首先，我看到了 `key().value` 这种写法，尝试直接 `key(2).value = score / scoreAtFullPosition * 100`，但失败了，它不单单给 key(2) 赋值，而是把整个属性永远变成了这个值。后来，我又看到更复杂的`linear(t, tMin, tMax, value1, value2)` 写法，这是线性映射，根据 t 在 tMin 和 tMax 中的位置，决定输出 value1 至 value2 中对应的数值。它健壮一些的写法是这样的（如果你想沿用当前关键帧的时间）：
 
 ```
 startVal = 0
@@ -33,7 +33,7 @@ linear(time, t1, t2, startVal, finalVal)
 
 ### 我当初采用的方法：
 
-最初，我想着 JS 中应该会有贝塞尔插值的内置函数吧，就问了问 ChatGPT，得到的答案是 ```ease()```。但是这个 ease 实在是「视」之无味呀！没有我们想要的「33% 100%」或者「66% 88%」插值，看着很硬。于是我追问「有没有贝塞尔曲线插值函数」，它给我扔了个很复杂的数学向公式（且两边插值一致，很难自定义）。折腾了一顿实在没办法了之后想到了 Flow 这款插件。
+最初，我想着 JS 中应该会有贝塞尔插值的内置函数吧，就问了问 ChatGPT，得到的答案是 `ease()`。但是这个 ease 实在是「视」之无味呀！没有我们想要的「33% 100%」或者「66% 88%」插值，看着很硬。于是我追问「有没有贝塞尔曲线插值函数」，它给我扔了个很复杂的数学向公式（且两边插值一致，很难自定义）。折腾了一顿实在没办法了之后想到了 Flow 这款插件。
 
 ![](/content/How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note/Screenshot%202025-05-03%20at%2000.46.52.png)<!-- {"width":150} -->
 
@@ -41,7 +41,7 @@ linear(time, t1, t2, startVal, finalVal)
 
 ![](/content/How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note/Screenshot%202025-05-03%20at%2000.48.17.png)
 
-它写了个看不懂的 ```customBezier``` 函数，随后再调用这个函数。相比之前的 ```linear``` 函数，它多接受一个参数，是有四个 number 的 array，也就是熟悉的贝塞尔插值数组，在这里是：
+它写了个看不懂的 `customBezier` 函数，随后再调用这个函数。相比之前的 `linear` 函数，它多接受一个参数，是有四个 number 的 array，也就是熟悉的贝塞尔插值数组，在这里是：
 
 ```
 customBezier(time, animationStartTime, animationEndTime, startValue, endValue, [0.42,0,0.2,1]);
@@ -106,7 +106,7 @@ linear(slider, 0, 100, 0, finalVal)
 
 首先，随手画出来的线并不完美，整个图层的锚点不在正中心，你也不知道它长度具体是多少，除非你像我一样先扯三根参考线（两条竖的，分别在左右；一条横的，在中心）进来，并开启「Snap to Guides」，再对齐画线。我们可以 Create Nulls from Path，再对齐这些 Null。确保线条在正中央且 Gradient Stroke 的 Start Point / End Point 位置都没问题后，再开始这一步。
 
-整个线条 100% 的长度应该是不变的，这样的话，Gradient Stroke 的 Start Point 的位置也是不变的。比如这个线条长 1320（两个 Null 分别在 [300, 540]、[1620, 540]，假设这是 1080P 的合成），那么 Start Point 应该在 [-1320 / 2, 0]，End Point 第一个关键帧也在 [-1320 / 2, 0]。我们要让 End Point 第二个关键帧在合适的位置，也就是说，第二个关键帧的**值**是 ```[linear(CurrValue, 0, ValueAtFull, -1320 / 2, 1320 / 2), 0]```（善用 linear() 方法）。（sorry 我分不太清方法和函数…）
+整个线条 100% 的长度应该是不变的，这样的话，Gradient Stroke 的 Start Point 的位置也是不变的。比如这个线条长 1320（两个 Null 分别在 [300, 540]、[1620, 540]，假设这是 1080P 的合成），那么 Start Point 应该在 [-1320 / 2, 0]，End Point 第一个关键帧也在 [-1320 / 2, 0]。我们要让 End Point 第二个关键帧在合适的位置，也就是说，第二个关键帧的**值**是 `[linear(CurrValue, 0, ValueAtFull, -1320 / 2, 1320 / 2), 0]`（善用 linear() 方法）。（sorry 我分不太清方法和函数…）
 
 ## 让文字跟随线条结尾移动
 
@@ -114,7 +114,7 @@ linear(slider, 0, 100, 0, finalVal)
 
 ## 怎么做成组件？应该展示哪些变量给父合成？
 
-到这里，我们已经有很多处用到了 ```finalValue```、```ValueAtFull``` 等变量，要是每个表达式都这么写那太麻烦了，我们需要一个统一的地方存储这些变量。新建一个空对象，叫「Control」好了，再加几个 Slider Control 来控制这些变量（而且方便之后扔到 Essential Graphics / 基本图形，暴露给父合成方便修改），大概这样：
+到这里，我们已经有很多处用到了 `finalValue`、`ValueAtFull` 等变量，要是每个表达式都这么写那太麻烦了，我们需要一个统一的地方存储这些变量。新建一个空对象，叫「Control」好了，再加几个 Slider Control 来控制这些变量（而且方便之后扔到 Essential Graphics / 基本图形，暴露给父合成方便修改），大概这样：
 
 ![](/content/How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note/Screenshot%202025-05-03%20at%2001.21.46.png)
 
