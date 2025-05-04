@@ -3,22 +3,13 @@ const safeMod = (n: number, mod: number) => ((n % mod) + mod) % mod;
 type Color = string;
 type CircleGradient = [Color, Color]
 
-// const LogoCirclesWithColors: Record<number, CircleGradient> = {
-//     0: ['#C7432E', '#D6803B'],
-//     1: ['#DB9349', '#ECDE5A'],
-//     2: ['#DEE669', '#B5F289'],
-//     3: ['#A6F398', '#8BB9FE'],
-//     4: ['#4B4EB1', '#6E83EC'],
-//     5: ['#4AB3FA', '#FFB29F'],
-// }
-
 const LogoCirclesWithColors: Record<number, CircleGradient> = {
-    0: ['#A6F398', '#6E83EC'],
-    1: ['#A6F398', '#6E83EC'],
-    2: ['#A6F398', '#6E83EC'],
-    3: ['#A6F398', '#6E83EC'],
-    4: ['#A6F398', '#6E83EC'],
-    5: ['#A6F398', '#6E83EC'],
+    0: ['#C7432E', '#D6803B'],
+    1: ['#DB9349', '#ECDE5A'],
+    2: ['#DEE669', '#B5F289'],
+    3: ['#A6F398', '#8BB9FE'],
+    4: ['#4B4EB1', '#6E83EC'],
+    5: ['#4AB3FA', '#FFB29F'],
 }
 
 interface LogoAnimatedProps {
