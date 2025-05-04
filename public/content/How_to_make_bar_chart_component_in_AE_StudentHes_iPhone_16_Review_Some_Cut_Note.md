@@ -35,7 +35,7 @@ linear(time, t1, t2, startVal, finalVal)
 
 最初，我想着 JS 中应该会有贝塞尔插值的内置函数吧，就问了问 ChatGPT，得到的答案是 `ease()`。但是这个 ease 实在是「视」之无味呀！没有我们想要的「33% 100%」或者「66% 88%」插值，看着很硬。于是我追问「有没有贝塞尔曲线插值函数」，它给我扔了个很复杂的数学向公式（且两边插值一致，很难自定义）。折腾了一顿实在没办法了之后想到了 Flow 这款插件。
 
-![](/content/How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note/Screenshot%202025-05-03%20at%2000.46.52.png)<!-- {"width":150} -->
+![](/content/How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note/Screenshot%202025-05-03%20at%2000.46.52.png)
 
 按住 Cmd 并按下 Apply 后，就可以以表达式的方式，应用这个插值曲线。点开应用的表达式后可以看到：
 

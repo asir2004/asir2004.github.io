@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { CodeBlock, InlineCode } from './markdown/index'
+import { CodeBlock, InlineCode, H1, Image } from './markdown/index'
+import Vimeo from "@u-wave/react-vimeo";
 
 interface ProjectCardViewProps {
     project: Project;
@@ -155,21 +156,31 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                     )}
                 </AnimatePresence>
 
-                <motion.img
-                    layout
-                    transition={{ duration: 0.5, type: "spring" }}
-                    src={"/src/resources/" + project.coverImage}
-                    alt={project.title}
-                    className="w-full object-cover"
-                />
+                {/*Cover Image*/}
+                <motion.div className="relative">
+                    <motion.img
+                        layout
+                        transition={{ duration: 0.5, type: "spring" }}
+                        src={"/src/resources/" + project.coverImage}
+                        alt={project.title}
+                        className="w-full"
+                    />
+                    {isExpanded && (
+                        <motion.div key="vimeo-overlay" className="absolute inset-0 flex items-center justify-center bg-black/50 w-full h-full">
+                            <Vimeo video="1053344944" autoplay />
+                        </motion.div>
+                    )}
+                </motion.div>
 
                 {isExpanded && (
-                    <div className="flex flex-col w-full p-8 gap-2">
+                    <div className="flex flex-col w-full p-8 gap-4">
                         {/*Content*/}
                         <Markdown
                             components={{
+                                h1: H1,
                                 code: InlineCode,
                                 pre: CodeBlock,
+                                img: Image,
                             }}
                             remarkPlugins={[remarkGfm]}
                         >
