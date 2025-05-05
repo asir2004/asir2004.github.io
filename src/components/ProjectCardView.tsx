@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { CodeBlock, InlineCode, H1, Image } from './markdown/index'
+import { CodeBlock, InlineCode, H1, H2, Image } from './markdown/index'
 import ProjectCardImageVideoView from "./ProjectCardImageVideoView";
 
 interface ProjectCardViewProps {
@@ -165,8 +165,11 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                         <Markdown
                             components={{
                                 h1: H1,
+                                h2: H2,
                                 code: InlineCode,
                                 pre: CodeBlock,
+                                ol: ({ ...props }) => <ol className="list-decimal pl-[1rem]" {...props} />,
+                                ul: ({ ...props }) => <ul className="list-disc pl-[1rem]" {...props} />,
                                 img: Image,
                             }}
                             remarkPlugins={[remarkGfm]}
