@@ -18,7 +18,7 @@ interface MarkdownFiles {
     [key: string]: string;
 }
 
-const markdownFiles = import.meta.glob("../../public/content/*.md", {
+const markdownFiles = import.meta.glob("/public/content/*.md", {
     query: "?url&raw",
     import: "default",
     eager: true,
@@ -37,7 +37,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
     useEffect(() => {
         if (isExpanded) {
             const fileName = project.document;
-            const filePath = `../../public/content/${fileName}.md`;
+            const filePath = `/public/content/${fileName}.md`;
             const content = markdownFiles[filePath];
             if (content) {
                 setMarkdownContent(content);
@@ -115,7 +115,10 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             className={`flex flex-col w-full h-30 items-start ${isExpanded ? "pt-20 px-8 pb-8" : "p-4"}`}
                         >
                             <div className="flex flex-row w-full justify-between">
-                                <p className="font-bold">{project.title}</p>
+                                <p className="font-bold line-clamp-1">{project.title}</p>
+                            </div>
+                            <div className="flex flex-row w-full justify-between">
+                                <p>{project.client?.name}</p>
                                 <div className="flex flex-row text-neutral-500">
                                     <p>{project.month}</p>
                                     {yearIsShown && (
@@ -126,7 +129,6 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                                     )}
                                 </div>
                             </div>
-                            <p>{project.client?.name}</p>
                             <p className="line-clamp-1 text-neutral-500">{project.description}</p>
                         </motion.div>
                     )}

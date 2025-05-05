@@ -17,7 +17,7 @@ export default function ContactPage() {
                     animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 25 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard/>
+                    <ContactCard link={"mailto:markview.business@gmail.com"} subtitle="Email Address" title="markview.business@gmail.com" icon="mail" />
                 </motion.div>
                 <motion.div
                     layout
@@ -26,7 +26,7 @@ export default function ContactPage() {
                     animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : -10 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard/>
+                    <ContactCard link="" subtitle="WeChat" title="@mark_x64" icon="wechat" />
                 </motion.div>
                 <motion.div
                     layout
@@ -35,7 +35,7 @@ export default function ContactPage() {
                     animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 10 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard />
+                    <ContactCard link="https://t.me/marklmao233" subtitle="Telegram" title="@marklmao233" icon="telegram" />
                 </motion.div>
 
                 {/* Last one should be NOT absolute */}
@@ -45,7 +45,7 @@ export default function ContactPage() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                 >
-                    <ContactCard />
+                    <ContactCard link="https://apple.com.cn" subtitle="Apple Website" title="Just a Placeholder" icon="mail" />
                 </motion.div>
             </motion.div>
 
