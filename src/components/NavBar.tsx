@@ -41,7 +41,7 @@ function NavBar() {
           <ul className="flex space-x-6">
             <li>
               <Link to="/">
-                <Lottie id={"NavBarLottieAnim"} animationData={navBarLogoAnimationJSON} loop={ false } className='-translate-x-6 h-8 invert' />
+                <Lottie id={"NavBarLottieAnim"} animationData={navBarLogoAnimationJSON} loop={false} className='-translate-x-6 h-8 invert' />
               </Link>
             </li>
           </ul>
@@ -50,14 +50,14 @@ function NavBar() {
         {/* Links */}
         <div className="flex items-center justify-end h-16">
           <ul className="flex space-x-6">
-            { navItems.map(({ to, label }) => (
+            {navItems.map(({ to, label }) => (
               <NavBarLinkItem
                 key={to}
                 to={to}
                 label={label}
                 isActive={isActive(to)}
               />
-            )) }
+            ))}
           </ul>
         </div>
       </div>
