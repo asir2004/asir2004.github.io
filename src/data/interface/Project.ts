@@ -11,7 +11,8 @@ interface Project {
     coverImage: string;
     client?: Client;
     agency?: Agency;
-    document? : string;
+    document?: string;
+    vimeoID?: string;
 }
 
 export default Project;

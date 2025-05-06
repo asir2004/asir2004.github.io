@@ -25,6 +25,11 @@ const clients: { [key: string]: Client } = {
         id: "Tanka",
         name: "Tanka",
         type: "Startup",
+    },
+    Delve: {
+        id: "Delve",
+        name: "Delve",
+        type: "Startup",
     }
 }
 

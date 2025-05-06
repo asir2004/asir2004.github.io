@@ -41,11 +41,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
             const content = markdownFiles[filePath];
             if (content) {
                 setMarkdownContent(content);
-            } else {
-                setMarkdownContent('# Not Found\n\nMarkdown file not found.');
             }
-        } else {
-            setMarkdownContent("");
         }
     }, [isExpanded, project.document]);
 
@@ -115,7 +111,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             className={`flex flex-col w-full h-30 items-start ${isExpanded ? "pt-20 px-8 pb-8" : "p-4"}`}
                         >
                             <div className="flex flex-row w-full justify-between">
-                                <p className="font-bold line-clamp-1">{project.title}</p>
+                                <p className={`font-bold ${project.description === "" ? "line-clamp-2" : "line-clamp-1"}`}>{project.title}</p>
                             </div>
                             <div className="flex flex-row w-full justify-between">
                                 <p>{project.client?.name}</p>
@@ -161,9 +157,8 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                 {/*Cover Image*/}
                 <ProjectCardImageVideoView project={project} isExpanded={isExpanded} />
 
-                {isExpanded && (
+                {isExpanded && markdownContent !== "" && (
                     <div className="flex flex-col w-full p-8 gap-4">
-                        {/*Content*/}
                         <Markdown
                             components={{
                                 h1: H1,

@@ -19,7 +19,7 @@ export default function ProjectsPage({ year, description, projects, expandedCard
         <div className="flex flex-col items-start text-start max-w-6xl gap-4 p-4">
             <div className="flex flex-col items-start text-start">
                 <h1>{year}</h1>
-                <p>{description}</p>
+                <p className='opacity-50'>{description}</p>
             </div>
             <div className={`${gridStyles.base} ${gridStyles.responsive}`}>
                 {projects.map((project, index) => (
