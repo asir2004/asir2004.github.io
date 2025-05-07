@@ -1,7 +1,6 @@
 import Project from '../data/interface/Project'
 import { motion } from 'framer-motion'
 import Vimeo from '@u-wave/react-vimeo'
-import React, { useState, useRef, useEffect } from 'react';
 
 interface ProjectCardImageVideoViewProps {
     project: Project,

@@ -1,10 +1,10 @@
-import LogoAnimated from "../components/LogoAnimated"
+import WIPPage from "./WIPPage"
 
 export default function ProcessPage() {
     return (
         <>
-            <LogoAnimated />
+            {/* <LogoAnimated /> */}
+            <WIPPage lackedPageName="Process Page" />
         </>
-        // {/* <WIPPage lackedPageName="Process Page" /> */}
     )
 }
