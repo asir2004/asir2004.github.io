@@ -17,7 +17,7 @@ export default function ContactPage() {
                     animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 25 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard link={"mailto:markview.business@gmail.com"} subtitle="Email Address" title="markview.business@gmail.com" icon="mail" />
+                    <ContactCard link={"mailto:markview.business@gmail.com"} subtitle="Email" title="markview.business@gmail.com" icon="mail" color="blue" />
                 </motion.div>
                 <motion.div
                     layout
@@ -26,16 +26,36 @@ export default function ContactPage() {
                     animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : -10 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard link="" subtitle="WeChat" title="@mark_x64" icon="wechat" />
+                    <ContactCard link="" subtitle="WeChat" title="@mark_x64" icon="wechat" color="green" />
                 </motion.div>
                 <motion.div
                     layout
                     transition={{ ...transitionSpring, duration: 0.6 }}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 10 }}
+                    animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 5 }}
                     className={ cardsAreExpanded ? "" : "absolute" }
                 >
-                    <ContactCard link="https://t.me/marklmao233" subtitle="Telegram" title="@marklmao233" icon="telegram" />
+                    <ContactCard link="https://t.me/marklmao233" subtitle="Telegram" title="@marklmao233" icon="telegram" color="blue" />
+                </motion.div>
+
+                <motion.div
+                    layout
+                    transition={{ ...transitionSpring, duration: 0.6 }}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : -30 }}
+                    className={ cardsAreExpanded ? "" : "absolute" }
+                >
+                    <ContactCard link="https://x.com/markbuildin" subtitle="Twitter" moreInfo="1221 followers" title="Mark View" icon="twitter" color="blue" />
+                </motion.div>
+
+                <motion.div
+                    layout
+                    transition={{ ...transitionSpring, duration: 0.6 }}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1, rotate: cardsAreExpanded ? 0 : 15 }}
+                    className={ cardsAreExpanded ? "" : "absolute" }
+                >
+                    <ContactCard link="https://github.com/asir2004" subtitle="GitHub" title="asir2004" icon="github" color="gray" />
                 </motion.div>
 
                 {/* Last one should be NOT absolute */}
@@ -45,7 +65,7 @@ export default function ContactPage() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                 >
-                    <ContactCard link="https://apple.com.cn" subtitle="Apple Website" title="Just a Placeholder" icon="mail" />
+                    <ContactCard link="https://space.bilibili.com/238029680" subtitle="bilibili" moreInfo="9700 followers" title="@Mark_View" icon="bilibili" color="pink" />
                 </motion.div>
             </motion.div>
 
