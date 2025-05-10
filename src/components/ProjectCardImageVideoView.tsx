@@ -9,11 +9,11 @@ interface ProjectCardImageVideoViewProps {
 
 export default function ProjectCardImageVideoView({ project, isExpanded }: ProjectCardImageVideoViewProps) {
     return (
-        <motion.div className="relative">
+        <motion.div className="flex items-center justify-center w-full h-full overflow-hidden">
             <motion.img
                 layout
                 transition={{ duration: 0.5, type: "spring" }}
-                src={"/src/resources/" + project.coverImage}
+                src={"/covers/" + project.coverImage}
                 alt={project.title}
                 className={`w-full transition-all ${isExpanded ? 'blur-lg opacity-50' : ''}`}
             />

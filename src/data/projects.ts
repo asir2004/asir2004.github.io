@@ -8,7 +8,7 @@ const projects: Project[] = [
         year: 2025,
         month: "January",
         previewLink: "https://www.linkedin.com/posts/karun-kaushik_today-were-thrilled-to-announce-our-33m-activity-7290036228878430209-HqqC?utm_source=share&utm_medium=member_desktop",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "Delve Launch.png",
         client: clients["Delve"],
     },
     {
@@ -17,7 +17,7 @@ const projects: Project[] = [
         year: 2024,
         month: "September",
         previewLink: "https://www.bilibili.com/video/BV1zWtjezEAL/?share_source=copy_web&t=1297",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "HTX iPhone 16 - Charts.png",
         document: "How_to_make_bar_chart_component_in_AE_StudentHes_iPhone_16_Review_Some_Cut_Note",
         client: clients["HTX"],
     },
@@ -27,7 +27,7 @@ const projects: Project[] = [
         year: 2023,
         month: "December",
         previewLink: "https://taptap.cn",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "TapTap Rebranding.png",
         client: clients["Joyteeth"],
     },
     {
@@ -36,7 +36,7 @@ const projects: Project[] = [
         year: 2023,
         month: "August",
         previewLink: "https://www.bilibili.com/video/BV1nj41117FS/",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "bilibili 2023 summer.jpg",
         client: clients["Joyteeth"],
     },
     {
@@ -45,7 +45,7 @@ const projects: Project[] = [
         year: 2023,
         month: "July",
         previewLink: "https://www.youtube.com/watch?v=ZWgh5z0RbSA",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "Xmind Works.png",
         client: clients["Xmind"],
     },
     {
@@ -54,7 +54,7 @@ const projects: Project[] = [
         year: 2023,
         month: "July",
         previewLink: "https://www.youtube.com/watch?v=QrTDM-SIX0I",
-        coverImage: "placeholder image 16-9.jpg",
+        coverImage: "Xmind iOS Widget.png",
         client: clients["Xmind"],
     },
 ]

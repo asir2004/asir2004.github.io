@@ -27,7 +27,7 @@ const markdownFiles = import.meta.glob("/public/content/*.md", {
 export default function ProjectCardView({ project, yearIsShown, isExpanded, onExpand, onClose }: ProjectCardViewProps) {
     const cardStyles = {
         base: "flex flex-col items-start text-start bg-gray-100",
-        closed: "max-w-xs h-64 rounded-xl overflow-clip",
+        closed: "max-w-xs h-64 rounded-xl overflow-clip border",
         expanded: "w-[calc(100%-2rem)] max-w-2xl max-h-[calc(100%-8rem)] overflow-scroll fixed top-1/2 left-1/2 -translate-x-1/2 shadow-lg rounded-3xl",
     };
 
