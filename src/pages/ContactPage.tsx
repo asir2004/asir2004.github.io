@@ -17,7 +17,7 @@ export default function ContactPage() {
 
     return (
         <>
-            <motion.div className={`${cardsAreExpanded ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' : 'blur-md opacity-50'}`}>
+            <motion.div className={`transition-all ${cardsAreExpanded ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' : 'blur-md opacity-50'}`}>
                 {contacts.map((contact, index) => (
                     <motion.div
                         layout
