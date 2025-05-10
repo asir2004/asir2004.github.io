@@ -24,7 +24,6 @@ export default function ProjectsPage({ year, description, projects, expandedCard
             <div className={`${gridStyles.base} ${gridStyles.responsive}`}>
                 {projects.map((project, index) => (
                     <ProjectCardView
-                        id={index}
                         key={index}
                         project={project}
                         isExpanded={expandedCard?.year === year && expandedCard?.index === index}
