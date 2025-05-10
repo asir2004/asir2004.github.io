@@ -13,6 +13,10 @@ export default function Image({ src, alt, title }: any) {
         return () => window.removeEventListener("keydown", handleEsc);
     }, []);
 
+    useEffect(() => {
+        console.log('imageIsExpanded:', imageIsExpanded);
+    }, [imageIsExpanded]);
+
     return (
         <>
             <div
@@ -22,6 +26,7 @@ export default function Image({ src, alt, title }: any) {
             >
                 <img src={src} alt={alt} title={title} />
             </div>
+
             {createPortal(
                 <AnimatePresence>
                     {imageIsExpanded && (

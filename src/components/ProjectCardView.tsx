@@ -89,8 +89,10 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                 transition={{ duration: 0.5, type: "spring" }}
                 className={`${cardStyles.base} ${isExpanded ? cardStyles.expanded : cardStyles.closed}`}
                 onClick={() => {
-                    !isExpanded ? onExpand : undefined
-                    handleExpandProject(project)
+                    if (!isExpanded) {
+                        onExpand
+                        handleExpandProject(project)
+                    }
                 }}
                 style={{
                     zIndex: zIndex,
@@ -112,7 +114,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             transition={{ duration: 0.2 }}
                             className="absolute bg-gray-200 p-2 rounded-full m-2 self-end z-5"
                         >
-                            <button onClick={()=> {
+                            <button onClick={() => {
                                 onClose
                                 handleCloseProject()
                             }}>Close</button>
