@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import { CodeBlock, InlineCode, H1, H2, Image } from './markdown/index'
 import ProjectCardImageVideoView from "./ProjectCardImageVideoView";
 import Link from "./Link"
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectCardViewProps {
     project: Project;
