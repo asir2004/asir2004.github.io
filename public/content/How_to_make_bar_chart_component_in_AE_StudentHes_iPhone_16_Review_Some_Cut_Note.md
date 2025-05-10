@@ -131,3 +131,4 @@ linear(slider, 0, 100, 0, finalVal)
 ## 哎呀太麻烦了你能不能直接扔出来让我用
 
 OK，AE 工程文件链接：
+[Horizontal Bar Chart Unit](https://snowflake40.gumroad.com/l/horizontalBarChartUnit)

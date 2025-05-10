@@ -167,6 +167,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                     <div className="flex flex-col w-full p-8 gap-4">
                         <Markdown
                             components={{
+                                a: Link,
                                 h1: H1,
                                 h2: H2,
                                 code: InlineCode,
