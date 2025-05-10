@@ -90,7 +90,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                 className={`${cardStyles.base} ${isExpanded ? cardStyles.expanded : cardStyles.closed}`}
                 onClick={() => {
                     if (!isExpanded) {
-                        onExpand
+                        onExpand()
                         handleExpandProject(project)
                     }
                 }}
@@ -115,7 +115,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             className="absolute bg-gray-200 p-2 rounded-full m-2 self-end z-5"
                         >
                             <button onClick={() => {
-                                onClose
+                                onClose()
                                 handleCloseProject()
                             }}>Close</button>
                         </motion.div>
