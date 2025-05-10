@@ -1,5 +1,6 @@
 import { ClassNameValue } from 'tailwind-merge';
 import ContactCardConnectButton, { ContactCardConnectButtonShowTitleStatus } from '../components/ContactCardConnectButton';
+import ContactIcon from '../data/enum/ContactIcon';
 
 type ContactCardProps = {
     subtitle: string;
@@ -10,8 +11,6 @@ type ContactCardProps = {
     color: string;
     className?: ClassNameValue;
 }
-
-type ContactIcon = "wechat" | "mail" | "telegram" | "bilibili" | "twitter" | "github"
 
 export default function ContactCard({ subtitle, title, moreInfo, icon, color, link, className }: ContactCardProps) {
     return (
