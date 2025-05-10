@@ -5,6 +5,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CodeBlock, InlineCode, H1, H2, Image } from './markdown/index'
 import ProjectCardImageVideoView from "./ProjectCardImageVideoView";
+import Link from "./Link"
 
 interface ProjectCardViewProps {
     project: Project;
@@ -140,7 +141,10 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             transition={{ duration: 0.3 }}
                             className="flex flex-col w-full items-start p-8 pt-16 gap-1"
                         >
-                            <p className="font-bold">{project.title}</p>
+                            <div className="flex flex-row w-full place-content-between">
+                                <h1 className="font-bold">{project.title}</h1>
+                                <Link href={project.previewLink} isRTL >See Online</Link>
+                            </div>
                             <div className="flex flex-row w-full justify-between">
                                 <div className="flex flex-row">
                                     <p>{project.month}</p>

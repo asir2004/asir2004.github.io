@@ -22,6 +22,15 @@ const projects: Project[] = [
         client: clients["HTX"],
     },
     {
+        title: "Mercor",
+        description: "",
+        year: 2024,
+        month: "March",
+        previewLink: "https://www.bilibili.com/video/BV1zWtjezEAL/?share_source=copy_web&t=1297",
+        coverImage: "mercor.png",
+        client: clients["Mercor"],
+    },
+    {
         title: "TapTap Rebranding Film",
         description: "TapTap 品牌更新，探索了 AE 中三维的实现方法。",
         year: 2023,

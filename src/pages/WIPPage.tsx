@@ -1,5 +1,6 @@
 import WIPRiveAnimation from "../components/WIPRiveAnimation"
 import BlueprintBorder from "../components/BlueprintBorder"
+import Link from "../components/Link"
 
 type WIPPageProps = {
     lackedPageName?: string;
@@ -20,13 +21,7 @@ export default function WIPPage({ lackedPageName }: WIPPageProps) {
                         <div className="text-xl font-bold">Working in Progress...</div>
                         <div className="text-gray-500">{ lackedPageName }</div>
                     </div>
-                    <a href="mailto:markview.business@gmail.com" className="flex flex-row text-blue-500 group items-center">
-                        <svg viewBox="-12 -10 24 20" className="h-4 mr-0 stroke-2 stroke-blue-300 fill-none aspect-[17/14] -translate-x-2.5 group-hover:mr-2 group-hover:translate-x-0 transition-all">
-                            <path d="M10 0 L2 -8 L10 0 L2 8" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M-10 0 L10 0" strokeLinecap="round" strokeLinejoin="round" className="translate-x-3 scale-x-0 group-hover:scale-x-100 group-hover:translate-x-0 transition-all" />
-                        </svg>
-                        <a className="group-hover:underline">Send an Email?</a>
-                    </a>
+                    <Link href="mailto:markview.business@gmail.com">Send an Email?</Link>
                 </div>
 
                 <BlueprintBorder color="blue-100" expandInifinitely={true}/>

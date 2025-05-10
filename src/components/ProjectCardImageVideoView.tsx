@@ -9,7 +9,7 @@ interface ProjectCardImageVideoViewProps {
 
 export default function ProjectCardImageVideoView({ project, isExpanded }: ProjectCardImageVideoViewProps) {
     return (
-        <motion.div className="flex items-center justify-center w-full h-full overflow-hidden">
+        <motion.div className={`relative ${isExpanded ? "" : "flex items-center justify-center w-full h-full overflow-hidden"}`}>
             <motion.img
                 layout
                 transition={{ duration: 0.5, type: "spring" }}
