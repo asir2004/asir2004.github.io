@@ -8,6 +8,7 @@ import ProjectCardImageVideoView from "./ProjectCardImageVideoView";
 import Link from "./Link"
 
 interface ProjectCardViewProps {
+    id: number,
     project: Project;
     yearIsShown?: boolean;
     isExpanded: boolean;
@@ -25,7 +26,7 @@ const markdownFiles = import.meta.glob("/public/content/*.md", {
     eager: true,
 }) as MarkdownFiles;
 
-export default function ProjectCardView({ project, yearIsShown, isExpanded, onExpand, onClose }: ProjectCardViewProps) {
+export default function ProjectCardView({ id, project, yearIsShown, isExpanded, onExpand, onClose }: ProjectCardViewProps) {
     const cardStyles = {
         base: "flex flex-col items-start text-start bg-gray-100",
         closed: "max-w-xs h-64 rounded-xl overflow-clip border",
@@ -58,7 +59,9 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
     }, [isExpanded]);
 
     return (
-        <motion.div>
+        <motion.div
+            className={`${isExpanded ? "" : "transition-all hover:-translate-y-2.5 hover:shadow-lg hover:scale-102 rounded-xl"}`}
+        >
             <AnimatePresence mode="popLayout">
                 {isExpanded && (
                     <motion.div
