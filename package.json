@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://asir2004.github.io/MarkViewWebInfo",
   "dependencies": {
     "@rive-app/react-canvas": "^4.18.8",
     "@tailwindcss/vite": "^4.1.1",
