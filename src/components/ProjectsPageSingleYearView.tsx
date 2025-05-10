@@ -1,5 +1,7 @@
 import Project from '@/data/interface/Project';
 import ProjectCardView from '../components/ProjectCardView';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 interface ProjectsPageSingleYearViewProps {
     year: number;
@@ -14,6 +16,17 @@ export default function ProjectsPage({ year, description, projects, expandedCard
         base: 'grid gap-4',
         responsive: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
     };
+
+    const { projectId } = useParams()
+
+    useEffect(() => {
+        if (projectId) {
+            const project = projects.find((project) => project.id === projectId)
+            if (project) {
+                setExpandedCard({ year, index: projects.indexOf(project) })
+            }
+        }
+    }, [projectId])
 
     return (
         <div className="flex flex-col items-start text-start max-w-6xl gap-4 p-4">

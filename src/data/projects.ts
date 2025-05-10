@@ -3,6 +3,7 @@ import Project from "./interface/Project";
 
 const projects: Project[] = [
     {
+        id: "delve-launch-video",
         title: "Delve Launch Video",
         description: "Finished in a week, worked like hackathon",
         year: 2025,
@@ -13,6 +14,7 @@ const projects: Project[] = [
         vimeoID: "1083092522",
     },
     {
+        id: "HTX-iPhone-16-review",
         title: "Some shots in iPhone 16 Review",
         description: "第二次参与何同学的 iPhone 首发评测视频。组件化的柱状图，来看看设计思路。",
         year: 2024,
@@ -23,6 +25,7 @@ const projects: Project[] = [
         client: clients["HTX"],
     },
     {
+        id: "xmind-mapify-introduction",
         title: "Mapify Introduction",
         description: "New mindmapping tool from Xmind",
         year: 2024,
@@ -33,6 +36,7 @@ const projects: Project[] = [
         vimeoID: "1083091656"
     },
     {
+        id: "mercor",
         title: "Mercor",
         description: "",
         year: 2024,
@@ -43,6 +47,7 @@ const projects: Project[] = [
         vimeoID: "1083092941",
     },
     {
+        id: "taptap-rebranding-2023",
         title: "TapTap Rebranding Film",
         description: "TapTap 品牌更新，探索了 AE 中三维的实现方法。",
         year: 2023,
@@ -52,6 +57,7 @@ const projects: Project[] = [
         client: clients["Joyteeth"],
     },
     {
+        id: "bilibili-summer-report-2023",
         title: "bilibili 夏日报告 2023",
         description: "第一次参与能被亿计人看到的项目。",
         year: 2023,
@@ -61,6 +67,7 @@ const projects: Project[] = [
         client: clients["Joyteeth"],
     },
     {
+        id: "xmind-works-collaboration",
         title: "Introducing Xmind.Works Collaboration",
         description: "",
         year: 2023,
@@ -70,6 +77,7 @@ const projects: Project[] = [
         client: clients["Xmind"],
     },
     {
+        id: "xmind-widget-ios",
         title: "Xmind Widget on iOS",
         description: "",
         year: 2023,

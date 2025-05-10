@@ -3,6 +3,7 @@ import Client from './Client'
 import Agency from './Agency'
 
 interface Project {
+    id: string;
     title: string;
     description: string;
     year: number;

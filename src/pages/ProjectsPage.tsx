@@ -3,11 +3,18 @@ import projects from '../data/projects';
 import { groupProjectsByYear } from '../function/groupProjectsByYear';
 import { yearlyDescriptions } from '../data/yearlyDescriptions';
 import { useState } from 'react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProjectsPage() {
     const groupedProjectsByYear = groupProjectsByYear(projects);
     const [expandedCard, setExpandedCard] = useState<{ year: number; index: number } | null>(null);
+
+    const navigate = useNavigate();
+
+    const handleCloseProject = () => {
+        navigate('/projects/');
+    };
 
     return (
         <div className="flex flex-col gap-8 max-w-5xl pt-16">
@@ -28,7 +35,10 @@ export default function ProjectsPage() {
                 </motion.div>
             ))}
 
-            <div onClick={() => setExpandedCard(null)} className={`z-1 fixed bg-black w-screen h-screen left-0 top-0 transition-opacity ${expandedCard === null ? "opacity-0 pointer-events-none" : "opacity-50 pointer-events-auto"}`} />
+            <div onClick={() => {
+                setExpandedCard(null)
+                handleCloseProject()
+            }} className={`z-1 fixed bg-black w-screen h-screen left-0 top-0 transition-opacity ${expandedCard === null ? "opacity-0 pointer-events-none" : "opacity-50 pointer-events-auto"}`} />
         </div>
     )
 }

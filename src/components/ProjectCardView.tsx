@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { CodeBlock, InlineCode, H1, H2, Image } from './markdown/index'
 import ProjectCardImageVideoView from "./ProjectCardImageVideoView";
 import Link from "./Link"
+import { Navigate, useNavigate } from "react-router-dom";
 
 interface ProjectCardViewProps {
     project: Project;
@@ -34,6 +35,16 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
 
     const [zIndex, setZIndex] = useState(0);
     const [markdownContent, setMarkdownContent] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleExpandProject = (project: Project) => {
+        navigate(`/projects/${project.id}`);
+    };
+
+    const handleCloseProject = () => {
+        navigate('/projects/');
+    };
 
     useEffect(() => {
         if (isExpanded) {
@@ -77,7 +88,10 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                 layout
                 transition={{ duration: 0.5, type: "spring" }}
                 className={`${cardStyles.base} ${isExpanded ? cardStyles.expanded : cardStyles.closed}`}
-                onClick={!isExpanded ? onExpand : undefined}
+                onClick={() => {
+                    !isExpanded ? onExpand : undefined
+                    handleExpandProject(project)
+                }}
                 style={{
                     zIndex: zIndex,
                     scrollbarWidth: "none",
@@ -98,7 +112,10 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                             transition={{ duration: 0.2 }}
                             className="absolute bg-gray-200 p-2 rounded-full m-2 self-end z-5"
                         >
-                            <button onClick={onClose}>Close</button>
+                            <button onClick={()=> {
+                                onClose
+                                handleCloseProject()
+                            }}>Close</button>
                         </motion.div>
                     )}
                 </AnimatePresence>
