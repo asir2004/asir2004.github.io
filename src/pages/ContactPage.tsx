@@ -16,7 +16,7 @@ export default function ContactPage() {
     const transitionSpring: Transition = { duration: 0.5, type: "spring" }
 
     return (
-        <>
+        <div className="pt-16">
             <motion.div className={`transition-all ${cardsAreExpanded ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' : 'blur-md opacity-50'}`}>
                 {contacts.map((contact, index) => (
                     <motion.div
@@ -36,6 +36,6 @@ export default function ContactPage() {
                     <motion.button initial={{ scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 0.5, type: "spring" }} onClick={() => setCardsAreExpanded(!cardsAreExpanded)} className="absolute snap-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-4 bg-gradient-to-b from-blue-600/80 to-blue-300/30 rounded-full text-white whitespace-nowrap text-xl font-medium cursor-pointer hover:underline">Contact →</motion.button>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     )
 }

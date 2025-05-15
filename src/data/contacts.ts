@@ -4,6 +4,13 @@ export const contacts: ContactInfo[] = [
     {
         color: "blue",
         icon: "mail",
+        link: "mailto:hi@markview.work",
+        subtitle: "Email",
+        title: "hi@markview.work",
+    },
+    {
+        color: "blue",
+        icon: "mail",
         link: "mailto:markview.business@gmail.com",
         subtitle: "Email",
         title: "markview.business@gmail.com",
