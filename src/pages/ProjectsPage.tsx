@@ -3,7 +3,7 @@ import projects from '../data/projects';
 import { groupProjectsByYear } from '../function/groupProjectsByYear';
 import { yearlyDescriptions } from '../data/yearlyDescriptions';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 export default function ProjectsPage() {
@@ -35,10 +35,21 @@ export default function ProjectsPage() {
                 </motion.div>
             ))}
 
-            <div onClick={() => {
-                setExpandedCard(null)
-                handleCloseProject()
-            }} className={`z-1 fixed bg-black w-screen h-screen left-0 top-0 transition-opacity ${expandedCard === null ? "opacity-0 pointer-events-none" : "opacity-50 pointer-events-auto"}`} />
+            <AnimatePresence mode="wait">
+                {expandedCard && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.5 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                        onClick={() => {
+                            setExpandedCard(null)
+                            handleCloseProject()
+                        }}
+                        className={`z-1 fixed bg-black w-screen h-screen left-0 top-0 pointer-events-auto}`}
+                    />
+                )}
+            </AnimatePresence>
         </div>
     )
 }
