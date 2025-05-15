@@ -1,6 +1,6 @@
 import './App.css'
 import { ProjectsPage, ContactPage, ProcessPage, MainPage } from './pages'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
           <Route path="/projects/:projectId" element={<ProjectsPage />} />
           <Route path="/contact/" element={<ContactPage />} />
           <Route path="/process/" element={<ProcessPage />} />
+          <Route path="*" element={<MainPage />}></Route>
         </Routes>
       </div>
     </Router>
