@@ -63,15 +63,13 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
         } else {
             const timeout = setTimeout(() => {
                 setZIndex(0);
-            }, 1000);
+            }, 400);
             return () => clearTimeout(timeout);
         }
     }, [isExpanded]);
 
     return (
-        <motion.div
-            className={`${isExpanded ? "" : "transition-all hover:-translate-y-2.5 hover:shadow-lg hover:scale-102 rounded-xl"}`}
-        >
+        <>
             <AnimatePresence mode="popLayout">
                 {isExpanded && (
                     <motion.div
@@ -83,7 +81,7 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                     />
                 )}
             </AnimatePresence>
-
+            
             <motion.div
                 layout
                 transition={{ duration: 0.5, type: "spring" }}
@@ -202,6 +200,6 @@ export default function ProjectCardView({ project, yearIsShown, isExpanded, onEx
                     </div>
                 )}
             </motion.div>
-        </motion.div>
+        </>
     );
 }
